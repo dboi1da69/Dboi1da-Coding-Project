@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        main{
+            background-color: #f5f7f7;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .container{
+            display: flex;
+            text-align: center;
+            flex-wrap: wrap;
+
+        }
+       
+        .box1{
+            background-color: yellow;
+           flex: 2;
+           color: black !important;
+        } 
+        .box2{
+            background-color: ;
+           flex-wrap: wrap;
+            flex: 6;
+        }
+        .box3{
+            background-color: blue;
+            flex: 2;
+        }
+        .column{
+            margin: 20px;
+            padding: 20px;
+        }
+        .container .box2 {
+            display: flex;
+            gap: 5px;
+            flex-direction: row;
+
+        }
+        .post{
+            background-color: #ffff;
+            margin: 10px;
+            padding: 27px;
+            width: 20%;
+            height: 70px;
+        }
+
+        footer, header{
+            background-color: rgb(49, 128, 0);
+            padding: 30px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header><h1>Header</h1></header> 
+    <main>
+       <div class="container">
+        <div class="column box1">
+            <h1>box 1</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit hic vel perspiciatis commodi enim esse rem porro delectus libero itaque veniam odit, dolore error repellendus accusantium optio. Optio, consequuntur commodi?
+            </p>
+        </div>
+        <div class="column box2">
+            
+            <div class="post">1</div>
+            <div class="post">2</div>
+            <div class="post">3</div>
+            <div class="post">4</div>
+            <div class="post">5</div>
+            <div class="post">6</div>
+        </div>
+        <div class="column box3">
+            <h1>box 3</h1>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Impedit hic vel perspiciatis commodi enim esse rem porro delectus libero itaque veniam odit, dolore error repellendus accusantium optio. Optio, consequuntur commodi?
+            </p>
+        </div>
+       </div> 
+    </main>
+    <footer>&copy; 2025. My Project.</footer>
+</body>
+</html>

@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <style>
+        select{
+            margin-left: 45px;
+        }
+        
+        li{
+            margin-left: 10px;
+        }
+        .DOB{
+            margin-left: 9px;
+        }
+        .No{
+            margin-left: 19px;
+            
+        }
+        .sub{
+            margin-left: 215px;
+        }
+        form{
+            padding: 50px;
+            margin-left: 85px;
+        }
+        .submit{
+            margin-left: 150px;
+            width: 200px;
+            height: 50px;
+            background-color: green;
+        }
+        fieldset{
+            margin-left: 10px;
+        }
+        table{
+            border-collapse: collapse;
+            width: 500px;
+            line-height: 30px;
+            margin-left: 1px;
+            
+        }
+        button{
+            width: 70px;
+            padding: 4px;
+        }
+        #country-select{
+            margin: 5px;
+        }
+        #subject-select{
+            margin: 5px;
+            width: 117px;
+        }
+    </style>
+</head>
+<body>
+    <Fieldset>
+        <legend>Form 1</legend>
+    <form>
+        <label for="Name">Name:</label>
+        <ul>
+            <li><input type="text" name="First Name" id="First Name" placeholder="First Name"></li> 
+            <br>
+            <li> <input type="text" name="Last Name" id="Last Name" placeholder="Last Name"></li> 
+        </ul>
+        <br>
+        <label for="Email">Email:</label>
+        <input type="Email" name="Email" id="Email" placeholder="Input Email">
+        <br> <br>
+        <label class="No" for="Phone Number">No.</label>
+        <input type="Number" name="Phone number" id="Phone Number" placeholder="Input Phone Number">
+        <br><br><br>
+        <label class="DOB" for="DOB">DOB</label>
+        <input type="date" name="DOB" id="DOB">
+        
+        <select name="Country" id="Country">
+            <option value="#">Select Country...</option>
+            <option value="USA">USA</option>
+            <option value="Nigeria">Nigeria</option>
+            <option value="Portugal">Portugal</option>
+            <option value="Canada">Canada</option>
+            <option value="etc">etc...</option>
+        </select>
+        <br><br>
+        <select class="sub" name="Subject" id="Subject">
+            <option value="#">Select Subject..</option>
+            <option value="Maths">Maths</option>
+            <option value="English">English</option>
+            <option value="Chemistry">Chemistry</option>
+            <option value="Physics">Physics</option>
+        </select>
+        <br> <br>
+        <label for="Gender">Gender:</label>
+        <input type="radio" name="Gender" id="Gender" value="Male">Male
+        <input type="radio" name="Gender" id="Gender" value="Female">Female
+        <br><br><br>
+        <label for="file">Upload File:</label>
+        <input type="file" name="Result" id="Result">
+        <br><br><br>
+        <input class="submit" type="submit" value="Submit">
+        
+        </Fieldset> 
+        
+    </form>
+    <br>
+    
+</body>
+</html>

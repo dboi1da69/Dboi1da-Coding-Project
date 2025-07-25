@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .radiodec{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .captcha-box{
+            border: 2px solid #ccc;
+            padding: 18px;
+            margin-left: 160px;
+            width: 230px;
+            background-color: white;
+        }
+        .captcha-box img{
+            height: 30px;
+            width: 50px;
+            margin-left: 50px;
+            position: absolute;
+            
+        }
+        
+        .submitdec{
+            background-color: #3a2818;
+            color: white;
+            width: 370px;
+            line-height: 35px;
+            border-radius: 20px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            
+        }
+        .formdec{
+            justify-items: center;
+        }
+        .option1, .option2, .option3, .option4, .option5, .option6{
+            background-color: #edd5c5;
+            width: 150px;
+            border-radius:10px;
+            line-height: 40px;
+        }
+        body{
+            background-image: url(image/forest.png);
+        }
+    </style>
+</head>
+<body>
+  <div class="formdec">  <h2>Weeding Labor Registration Form</h2>
+    <br>
+    <form style="margin-left: 450px;">
+      <b> <label for="name">Name:<span style="color: tomato;">*</span></label></b>  <br>
+        <input type="text" name="name" id="name" style="border-radius: 10px; border: none; margin: 5px; padding: 5px; width: 250px; height: 25px;margin-left: 0px; background-color: #edd5c5;" placeholder="First">
+        <input type="text" name="name" id="name" style="border-radius: 10px; border: none;  margin: 5px; padding: 5px; width: 250px; height: 25px; background-color: #edd5c5;" placeholder="Last">
+        <br> <br> 
+        <b><label for="email">Email:<span style="color: tomato;">*</span></label></b>
+        <br>
+        <input type="email" name="email" id="email" style="border-radius: 10px; border: none;  margin: 5px; padding: 5px; width: 530px; height: 25px; margin-left: 0px; background-color: #edd5c5;" placeholder="Input Email">
+        <br><br>
+       <b><label for="number">Phone:<span style="color: tomato;">*</span></label></b> 
+        <br>
+        <input type="number" name="number" id="number" style="border-radius: 10px; border: none;  margin: 5px; padding: 5px; width: 530px; height: 25px; margin-left: 0px; background-color: #edd5c5;" placeholder="### ### ####">
+        <br><br>
+        <b><label for="select">Please select the weeding activity that you are specialized in:<span style="color: tomato;">*</span></label></b>
+        <br><br>
+        
+        <div class="radiodec">
+         <div class="option1">  
+        <input type="radio" name="select" id="mulching" value="mulching">
+        <b><label for="mulching">Mulching</label></b>
+         </div> 
+         <div class="option2">
+        <input type="radio" name="select" id="watering" value="watering">
+        <b><label for="watering">Watering</label></b>
+         </div>
+         <div class="option3">
+        <input type="radio" name="select" id="pulling" value="pulling">
+        <b><label for="pulling">Pulling</label></b>
+         </div>
+         <div style="flex-basis: 100%; height: 0%;"></div>
+         <div class="option4">
+        <input type="radio" name="select" id="digging" value="digging">
+        <b><label for="digging">Digging</label></b>
+         </div>  
+         <div class="option5">
+        <input type="radio" name="select" id="disking" value="disking">
+        <b><label for="disking">Disking</label></b>
+         </div> 
+         <div class="option6">
+        <input type="radio" name="select" id="mowing" value="mowing">
+        <b><label for="mowing">Mowing</label></b>
+        </div> 
+        </div>
+        <br><br>
+        <b><label for="date">When can you start?<span style="color: tomato;">*</span></label></b>
+        <br><br>
+        <input style="border-radius: 10px; border: none;  margin: 5px; padding: 5px; width: 530px; height: 30px; margin-left: 0px; background-color: #edd5c5;" type="date" name="date" id="date-select">
+        <br><br><br>
+        <b><label style="margin-left: 160px;" for="verification">Verification<span style="color: tomato;">*</span></label></b>
+        <br><br>
+     <div class="captcha-box">   <input type="checkbox" name="verification" id="captcha">
+        <label for="verification">I'm not a robot</label> <img src="image/captcha.png" alt="">
+        </div>
+        <br><br>
+        <input class="submitdec" style="margin-left: 90px;" type="submit" value="SUBMIT FORM">
+    </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+
+        body{
+            background-color: #f4f4f4;
+        }
+
+        .header-container{
+            text-align: center;
+            padding: 20px;
+            display: flex;
+            gap: 230px;
+        }
+
+        header{
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            gap: 250px;
+        }
+        footer{
+            background-color: #222;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            display: flex;
+            gap: 250px;
+        }
+        .top-bar h3 :hover{
+            background-color: white;
+        }
+        /* .top-bar h1{
+            overflow: hidden;
+            white-space: nowrap;
+            display: inline-block;
+            animation: emailSlide 10s linear infinite; */
+            
+        #email #number{
+            padding: 10px;
+            border-radius: 4px;
+            /* margin-left: 5px; */
+        }
+        /* @keyframes emailSlide{
+            from{
+                transform: translateX(100%);
+            }
+            to{
+                transform: translateX(-100%);
+            }
+        } */
+        nav ul{
+            display: flex;
+            /* justify-content: center; */
+            gap: 30px;
+            background-color: #444;
+            padding: 10px;
+            width: fit-content;
+            margin-left: 435px;
+        }
+        nav ul li{
+            list-style: none;
+        }
+        nav a{
+            text-decoration: none;
+            color: whitesmoke;
+            padding: 10px;
+        }
+        nav ul li :hover{
+            background-color: #555;
+        }
+        .carousel-css {
+  width: 100%;
+  /* margin: 20px auto; */
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel-css input {
+  display: none; /* Hide radio buttons */
+}
+
+.slides {
+  display: flex;
+  width: 600%; /* 3 images = 300% */
+  transition: transform 0.2s ease-in-out;
+}
+.slide{
+    flex: 0 0 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+    
+}
+.slide img{
+    width: 1300px;
+    height: 400px;
+    display: block;
+}
+
+.image {
+  width: 100%;
+  flex: 0 0 100%; /* Each slide takes full width */
+}
+
+.image img {
+  /* height: auto; */
+  display: block;
+   width: 100%;
+}
+.nav{
+    display: none;
+    position: absolute;
+    top: 50%;
+    justify-content: space-between;
+    transform: translateY(-50%);
+    /* padding: 0 10px; */
+    z-index: 999;
+    gap: 1210px;
+}
+
+/* Slide controls
+.controls {
+  position: absolute;
+  top: 45%;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+} */
+
+.arrow {
+  font-size: 2rem;
+  background: rgba(0, 0, 0, 0.4);
+  color: white;
+  padding: 5px;
+  cursor: pointer;
+}
+
+/* Slide Movement */
+#slide1:checked ~ .slides {
+  transform: translateX(0%);
+}
+
+#slide2:checked ~ .slides {
+  transform: translateX(-100%);
+}
+
+#slide3:checked ~ .slides {
+  transform: translateX(-200%);
+}
+
+#slide4:checked ~ .slides {
+  transform: translateX(-300%);
+}
+
+#slide5:checked ~ .slides {
+  transform: translateX(-400%);
+}
+
+#slide6:checked ~ .slides {
+  transform: translateX(-500%);
+}
+
+#slide1:checked ~ .nav1,
+#slide2:checked ~ .nav2,
+#slide3:checked ~ .nav3,
+#slide4:checked ~ .nav4,
+#slide5:checked ~ .nav5,
+#slide6:checked ~ .nav6{
+    display: flex;
+}
+
+
+        .container{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            padding: 10px;
+        }
+
+        .box{
+            padding: 20px;
+            height: fit-content;
+        }
+
+        .box1{
+        flex: 1;
+        background-color: rgb(48, 46, 139);
+        }
+        .box1>img{
+            width: 150px;
+        }
+
+        .box2{
+            display: flex;
+            flex: 8;
+            gap: 10px;
+            /* padding: 40px; */
+            flex-wrap: wrap;
+            text-align: center;
+        }
+
+        .post{
+            /* width: 30%; */
+            /* flex: 1px; */
+            background-color: #fff;
+            height: fit-content;
+            width: 250px;
+        }
+
+        .box3{
+        flex: 1;
+        text-align: center;
+        background-color: #666;
+        }
+        .minibox img{
+            width: 150px;
+        }
+        .post img{
+            width: 190px;
+        }
+        .box1:hover{
+            background-color: black;
+            color: antiquewhite;
+        }
+        .post:hover{
+            background-color: black;
+            color: whitesmoke;
+        }
+        .minibox:hover{
+            background-color: black;
+            color: whitesmoke;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+        <div class="top-bar h1">
+            <marquee behavior="scroll" direction="left">
+            <label for="email">Email:</label>
+            <input type="email" name="email" id="email" placeholder="Input Email">
+            <br><br>
+            <label for="number">Phone:</label>
+            <input type="number" name="number" id="number" placeholder="Input Phone">
+            </marquee>
+        </div>
+        <div class="top-bar h2"><h1>Welcome To My Blog</h1></div>
+        
+        <div class="top-bar h3">
+            <a href="https://facebook.com"><img style="width: 50px;" src="../image/Facebook.png" alt="image"></a>
+            <a href="https://instagram.com"><img style="width: 25px; padding: 10px;" src="../image/instagram.png" alt="image"></a>
+            <a href="https://x.com"><img style="width: 30px; padding: 10px;" src="../image/Twitter-X-Logo.png" alt="image"></a>
+            <a href="https://snapchat.com"><img style="width: 50px;" src="../image/snapchat.png" alt="image"></a>
+        </div>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="06.html">Home</a></li>
+                <li><a href="../about.html">About</a></li>
+                <li><a href="../blog3.html">Blog</a></li>
+                <li><a href="../contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+    </header>
+    <div class="carousel-css">
+        <input type="radio" name="slider" id="slide1" checked>
+        <input type="radio" name="slider" id="slide2">
+        <input type="radio" name="slider" id="slide3">
+        <input type="radio" name="slider" id="slide4">
+        <input type="radio" name="slider" id="slide5">
+        <input type="radio" name="slider" id="slide6">
+
+        <div class="slides">
+            <div class="slide"><img src="../image/eiffel.jpg" alt="Image 1"></div>
+            <div class="slide"><img src="../image/wetroad.jpg" alt="Image 2"></div>
+            <div class="slide"><img src="../image/asmr.jpg" alt="Image 3"></div>
+            <div class="slide"><img src="../image/bridge.jpg" alt="Image 4"></div>
+            <div class="slide"><img src="../image/USA.jpg" alt="Image 5"></div>
+            <div class="slide"><img src="../image/forest.png" alt="Image 6"></div>
+        </div>
+
+        <div class="nav nav1">
+            <label for="slide6" class="arrow">❮</label>
+            <label for="slide2" class="arrow">❯</label>
+        </div>
+        <div class="nav nav2">
+            <label for="slide1" class="arrow">❮</label>
+            <label for="slide3" class="arrow">❯</label>
+        </div>
+        <div class="nav nav3">
+            <label for="slide2" class="arrow">❮</label>
+            <label for="slide4" class="arrow">❯</label>
+        </div>
+        <div class="nav nav4">
+            <label for="slide3" class="arrow">❮</label>
+            <label for="slide5" class="arrow">❯</label>
+        </div>
+        <div class="nav nav5">
+            <label for="slide4" class="arrow">❮</label>
+            <label for="slide6" class="arrow">❯</label>
+        </div>
+        <div class="nav nav6">
+            <label for="slide5" class="arrow">❮</label>
+            <label for="slide1" class="arrow">❯</label>
+        </div>
+    </div>
+    <div class="container">
+        <div class="box box1">
+            <h2>Air Fleet</h2>
+            <br><br>
+            <img src="../image/airfleet.jpg" alt="image">
+            <br><br>
+            <p><em>Posted on July 1st, 2025 by Olayemi Kolawole</em></p>
+            <br>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dignissimos asperiores sint velit officia dolore temporibus, ducimus</p>
+            <br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque deleniti, molestiae deserunt iure commodi aspernatur recusandae ut porro sequi non consequuntur facere assumenda incidunt delectus suscipit eius mollitia laborum earum.</p>
+            <p>Lorem ipsum dolor sit am a bkig khan...</p>
+        </div>
+        
+        <div class="box box2">
+            <div class="post">
+                <h3>Air Fleet</h3>
+                <br>
+                <br>
+                <img src="../image/airfleet.jpg" alt="image">
+                <p><em>April 10, 2025</em></p>
+                <br>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Beatae reprehenderit inventore exercitationem sunt rem provident voluptatem nobis perferendis...</p>
+                <br>
+                <button>Read More...</button>
+            </div>
+            <div class="post">
+            <h3>Nebula</h3>
+            <br>
+            <br>
+            <img src="../image/nebula.jpg" alt="image">
+            <p><em>April 10, 2025</em></p>
+            <br>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fuga autem veritatis, enim voluptatem ipsum esse reiciendis tempora accusamus...</p>
+            <br>
+            <button>Read More...</button>
+            </div>
+            <div class="post"><h3>Bridge</h3>
+            <br>
+            <br>
+            <img src="../image/bridge.jpg" alt="image">
+            <p><em>April 10, 2025</em></p>
+            <br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae, maxime temporibus modi vero esse eum distinctio itaque molestias...</p>
+            <br>
+            <button>Read More...</button>
+            </div>
+            <div class="post"><h3>USA Flag</h3>
+            <br>
+            <br>
+            <img src="../image/USA.jpg" alt="image">
+            <p><em>April 10, 2025</em></p>
+            <br>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid magni hic doloremque nulla amet voluptas saepe nisi harum? Molestias distinctio...</p>
+            <br>
+            <button>Read More...</button>
+            </div>
+            <div class="post"><h3>Wet Road</h3>
+            <br>
+            <br>
+            <img src="../image/wetroad.jpg" alt="image">
+            <p><em>April 10, 2025</em></p>
+             <br>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Placeat, assumenda tempore rerum itaque perspiciatis aperiam, hic culpa doloribus...</p>
+            <br>
+            <button>Read More...</button>
+            </div>
+            <div class="post"><h3>ASMR</h3>
+            <br>
+            <br>
+            <img src="../image/asmr.jpg" alt="image">
+            <p><em>April 10, 2025</em></p>
+            <br>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Qui soluta, rerum ex tempore dignissimos recusandae! Veritatis cumque laboriosam...</p>
+            <br>
+            <button>Read More...</button>
+            </div>
+        </div>
+
+        <div class="box box3">
+            <h2>Recent Posts</h2>
+            <br>
+            <div class="minibox">
+                <h3>Bridge</h3>
+                <img src="../image/bridge.jpg" alt="image">
+            </div>
+            <br>
+            <div class="minibox">
+                <h3>USA</h3>
+                <img src="../image/USA.jpg" alt="image">
+            </div>
+            <br>
+            <div class="minibox">
+                <h3>Nebula</h3>
+                <img src="../image/nebula.jpg" alt="image">
+            </div>
+            <br>
+            <div class="minibox">
+                <h3>Ronaldo</h3>
+               <video controls width="128">
+                 <source src="../video/ronaldo.mp4" type="video/mp4">
+               </video>
+            </div>
+        </div>
+
+    </div>
+    <br>
+    <footer style="justify-content: center;">
+        <div class="f2">
+            <a href="../contact.html">Contact Us</a>
+            <br><br>
+            <a href="https://policies.google.com">Privacy Policy</a>
+        </div>
+        <div class="f1">
+       Copyright &copy; 2025. My Project. All Rights Reserved.
+        </div>
+        <div class="f3">
+            <a href="05.html">Home</a>
+            <br><br>
+            <a href="../about.html">About</a>
+        </div>
+    </footer>
+</body>
+</html>
